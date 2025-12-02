@@ -1,0 +1,395 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: #fafafa;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    letter-spacing: 3px;
+}
+
+header p {
+    font-size: 1.3rem;
+    font-style: italic;
+    opacity: 0.9;
+    letter-spacing: 1px;
+}
+
+nav {
+    background-color: #ED2939;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: #c41e2e;
+}
+
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.intro-moda {
+    margin-bottom: 3rem;
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 2.5rem;
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.intro-texto h2 {
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 1.5rem;
+    border-bottom: 4px solid #ED2939;
+    padding-bottom: 0.8rem;
+}
+
+.intro-texto p {
+    text-align: justify;
+    margin-bottom: 1.5rem;
+    line-height: 1.9;
+    font-size: 1.05rem;
+}
+
+.intro-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.maisons-iconicas {
+    margin-bottom: 3rem;
+}
+
+.maisons-iconicas > h2 {
+    font-size: 2.5rem;
+    color: #000;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    border-bottom: 4px solid #ED2939;
+    padding-bottom: 1rem;
+}
+
+.maisons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 2rem;
+}
+
+.maison {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.maison:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.maison-logo img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.maison-conteudo {
+    padding: 2rem;
+}
+
+.maison-conteudo h3 {
+    font-size: 1.8rem;
+    color: #000;
+    margin-bottom: 0.5rem;
+}
+
+.fundacao {
+    display: block;
+    color: #ED2939;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.maison-conteudo p {
+    text-align: justify;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.icones-maison {
+    list-style: none;
+    padding-left: 0;
+    background: #f5f5f5;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.icones-maison li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 0.95rem;
+}
+
+.icones-maison li:last-child {
+    border-bottom: none;
+}
+
+.semana-moda {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    color: white;
+    padding: 3rem;
+    border-radius: 15px;
+    margin-bottom: 3rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.semana-moda > h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 4px solid #ED2939;
+    padding-bottom: 1rem;
+}
+
+.fashion-week-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.fashion-week-info p:first-child {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    margin-bottom: 2rem;
+}
+
+.fw-detalhes {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.fw-item {
+    background: rgba(255,255,255,0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid #ED2939;
+}
+
+.fw-item h4 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    color: #ED2939;
+}
+
+.fw-item p {
+    line-height: 1.7;
+    margin-bottom: 0.5rem;
+}
+
+.fashion-week-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.estilo-frances {
+    margin-bottom: 3rem;
+}
+
+.estilo-frances > h2 {
+    font-size: 2.5rem;
+    color: #000;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 4px solid #ED2939;
+    padding-bottom: 1rem;
+}
+
+.estilo-descricao {
+    max-width: 900px;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+}
+
+.estilo-descricao p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: #555;
+}
+
+.principios-estilo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.principio {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.principio:hover {
+    transform: translateY(-5px);
+}
+
+.principio h3 {
+    font-size: 1.6rem;
+    color: #000;
+    padding: 1.5rem 1.5rem 1rem;
+    background: #f9f9f9;
+}
+
+.principio img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.principio p {
+    padding: 1.5rem;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+.distritos-moda {
+    background: linear-gradient(135deg, #ED2939 0%, #c41e2e 100%);
+    color: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.distritos-moda h2 {
+    font-size: 2.3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid white;
+    padding-bottom: 1rem;
+}
+
+.distritos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.distrito {
+    background: rgba(255,255,255,0.15);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 2px solid rgba(255,255,255,0.3);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.distrito:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.25);
+}
+
+.distrito h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.distrito p {
+    line-height: 1.7;
+}
+
+footer {
+    background-color: #002395;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin: 0.3rem 0;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .intro-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .maisons-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fashion-week-content {
+        grid-template-columns: 1fr;
+    }
+
+    .principios-estilo {
+        grid-template-columns: 1fr;
+    }
+
+    .distritos-grid {
+        grid-template-columns: 1fr;
+    }
+}

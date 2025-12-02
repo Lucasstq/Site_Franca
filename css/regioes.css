@@ -1,0 +1,326 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(to bottom, #87CEEB 0%, #98D8E8 100%);
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #228B22 0%, #1a6b1a 100%);
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+header p {
+    font-size: 1.3rem;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+nav {
+    background-color: #ED2939;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: #c41e2e;
+}
+
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.mapa-introducao {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    margin-bottom: 3rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.mapa-container img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.intro-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.intro-texto h2 {
+    font-size: 2.5rem;
+    color: #228B22;
+    margin-bottom: 1.5rem;
+    border-bottom: 4px solid #ED2939;
+    padding-bottom: 0.8rem;
+}
+
+.intro-texto p {
+    text-align: justify;
+    line-height: 1.9;
+    font-size: 1.05rem;
+}
+
+.regioes-destaque > h2 {
+    font-size: 2.5rem;
+    color: #228B22;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    border-bottom: 4px solid #ED2939;
+    padding-bottom: 1rem;
+}
+
+.regiao {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 2rem;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.regiao:hover {
+    transform: translateY(-3px);
+}
+
+.regiao-invertida {
+    grid-template-columns: 1.3fr 1fr;
+}
+
+.regiao-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.regiao-conteudo {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.regiao-conteudo h3 {
+    font-size: 2rem;
+    color: #228B22;
+    margin-bottom: 0.5rem;
+}
+
+.regiao-cidade {
+    color: #ED2939;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
+
+.regiao-conteudo > p:not(.regiao-cidade) {
+    text-align: justify;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.regiao-destaques {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.regiao-destaques span {
+    background: linear-gradient(135deg, #228B22 0%, #1a6b1a 100%);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.vale-loire {
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    margin-bottom: 3rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.vale-loire > h2 {
+    font-size: 2.5rem;
+    color: #228B22;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 4px solid #ED2939;
+    padding-bottom: 1rem;
+}
+
+.loire-content {
+    display: grid;
+    gap: 2rem;
+}
+
+.loire-texto {
+    padding: 1rem 0;
+}
+
+.loire-texto p {
+    text-align: justify;
+    line-height: 1.9;
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
+
+.loire-castelos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.castelo-item {
+    background: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.castelo-item:hover {
+    transform: scale(1.03);
+}
+
+.castelo-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.castelo-item h4 {
+    font-size: 1.4rem;
+    color: #228B22;
+    padding: 1rem 1.5rem 0.5rem;
+}
+
+.castelo-item p {
+    padding: 0 1.5rem 1.5rem;
+    line-height: 1.7;
+}
+
+.curiosidades-regionais {
+    background: linear-gradient(135deg, #228B22 0%, #1a6b1a 100%);
+    color: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.curiosidades-regionais h2 {
+    font-size: 2.3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid #ED2939;
+    padding-bottom: 1rem;
+}
+
+.curiosidades-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.curiosidade {
+    background: rgba(255,255,255,0.15);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 2px solid rgba(255,255,255,0.3);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.curiosidade:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.25);
+}
+
+.curiosidade h4 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #FFD700;
+}
+
+.curiosidade p {
+    line-height: 1.7;
+}
+
+footer {
+    background-color: #002395;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin: 0.3rem 0;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .mapa-introducao {
+        grid-template-columns: 1fr;
+    }
+
+    .regiao, .regiao-invertida {
+        grid-template-columns: 1fr;
+    }
+
+    .loire-castelos {
+        grid-template-columns: 1fr;
+    }
+}

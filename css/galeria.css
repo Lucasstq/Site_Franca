@@ -1,0 +1,496 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: #0a0a0a;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #4B0082 0%, #8B008B 100%);
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+header p {
+    font-size: 1.3rem;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+nav {
+    background-color: #ED2939;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: #c41e2e;
+}
+
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.introducao-galeria {
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 3rem;
+    box-shadow: 0 8px 20px rgba(255,255,255,0.1);
+}
+
+.introducao-galeria h2 {
+    font-size: 2.8rem;
+    color: #4B0082;
+    margin-bottom: 1.5rem;
+}
+
+.introducao-galeria p {
+    font-size: 1.1rem;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.9;
+    color: #555;
+}
+
+.galeria-principal > h2,
+.galeria-paisagens > h2,
+.galeria-cultura > h2,
+.videos-recomendados > h2,
+.galeria-historica > h2 {
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 4px solid #4B0082;
+    padding-bottom: 1rem;
+}
+
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.galeria-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(255,255,255,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.galeria-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(255,255,255,0.2);
+}
+
+.galeria-item.grande {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.galeria-item figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    color: white;
+    padding: 2rem 1.5rem 1.5rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.galeria-item:hover figcaption {
+    transform: translateY(0);
+}
+
+.galeria-item figcaption h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.galeria-item figcaption p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.galeria-paisagens {
+    margin-bottom: 3rem;
+}
+
+.grid-paisagens {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.paisagem-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(255,255,255,0.1);
+    transition: transform 0.3s ease;
+}
+
+.paisagem-item:hover {
+    transform: scale(1.03);
+}
+
+.paisagem-item.horizontal {
+    grid-column: span 2;
+}
+
+.paisagem-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.paisagem-item figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    color: white;
+    padding: 2rem 1.5rem 1rem;
+}
+
+.paisagem-item figcaption h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.galeria-cultura {
+    margin-bottom: 3rem;
+}
+
+.cultura-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.cultura-categoria {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(255,255,255,0.1);
+}
+
+.cultura-categoria h3 {
+    font-size: 1.8rem;
+    color: #4B0082;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.cultura-fotos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.cultura-fotos img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.cultura-fotos img:hover {
+    transform: scale(1.1);
+}
+
+.cultura-categoria p {
+    text-align: justify;
+    line-height: 1.7;
+}
+
+.videos-recomendados {
+    margin-bottom: 3rem;
+}
+
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.video-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(255,255,255,0.1);
+    transition: transform 0.3s ease;
+    cursor: default;
+}
+.video-link {
+    display: block;
+    text-decoration: none;
+}
+
+.video-item:hover {
+    transform: translateY(-5px);
+}
+
+.video-thumbnail {
+    position: relative;
+    height: 200px;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: rgba(75, 0, 130, 0.9);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: background 0.3s ease;
+}
+
+.video-item:hover .play-button {
+    background: rgba(75, 0, 130, 1);
+}
+
+.video-item h4 {
+    font-size: 1.3rem;
+    color: #4B0082;
+    padding: 1rem 1.5rem 0.5rem;
+}
+
+.video-item p {
+    padding: 0 1.5rem 1.5rem;
+    line-height: 1.6;
+}
+
+.tour-virtual {
+    background: linear-gradient(135deg, #4B0082 0%, #8B008B 100%);
+    color: white;
+    padding: 3rem;
+    border-radius: 15px;
+    margin-bottom: 3rem;
+    box-shadow: 0 8px 20px rgba(255,255,255,0.1);
+}
+
+.tour-virtual h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    border-bottom: 4px solid white;
+    padding-bottom: 1rem;
+}
+
+.tour-virtual > p {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.tours-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.tour-link {
+    display: block;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.tour-link:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.2);
+}
+
+.tour-link img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.tour-info {
+    padding: 1.5rem;
+}
+
+.tour-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.tour-info p {
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.galeria-historica {
+    margin-bottom: 3rem;
+}
+
+.historica-timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.foto-historica {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(255,255,255,0.1);
+    transition: transform 0.3s ease;
+}
+
+.foto-historica:hover {
+    transform: scale(1.03);
+}
+
+.foto-historica img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    filter: grayscale(30%) sepia(20%);
+}
+
+.foto-historica figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.95), transparent);
+    color: white;
+    padding: 2rem 1.5rem 1.5rem;
+}
+
+.foto-historica .ano {
+    display: inline-block;
+    background: #4B0082;
+    padding: 0.3rem 0.8rem;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+}
+
+.foto-historica h4 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.foto-historica p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+footer {
+    background-color: #002395;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin: 0.3rem 0;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .grid-galeria,
+    .grid-paisagens {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-item.grande,
+    .paisagem-item.horizontal {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .cultura-grid,
+    .videos-grid,
+    .tours-lista,
+    .historica-timeline {
+        grid-template-columns: 1fr;
+    }
+
+    .cultura-fotos {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,356 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f8f8f8;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+header p {
+    font-size: 1.3rem;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+nav {
+    background-color: #ED2939;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: #c41e2e;
+}
+
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.destaque-principal {
+    margin-bottom: 3rem;
+}
+
+.torre-eiffel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.torre-info {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.torre-info h2 {
+    font-size: 3rem;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+.torre-info .subtitulo {
+    font-size: 1.2rem;
+    color: #ED2939;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.dados-torre {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.dado {
+    background: linear-gradient(135deg, #002395 0%, #001a70 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.dado strong {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+}
+
+.dado span {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.torre-info .descricao {
+    text-align: justify;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.torre-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.monumentos-grid > h2 {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 4px solid #ED2939;
+    padding-bottom: 1rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.monumento {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.monumento:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.monumento-imagem {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.monumento-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.monumento:hover .monumento-imagem img {
+    transform: scale(1.1);
+}
+
+.monumento-imagem .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    color: white;
+    padding: 1.5rem;
+}
+
+.monumento-imagem .overlay h3 {
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.monumento-detalhes {
+    padding: 1.5rem;
+}
+
+.monumento-detalhes p {
+    margin-bottom: 0.8rem;
+    line-height: 1.7;
+}
+
+.monumento-detalhes p strong {
+    color: #002395;
+}
+
+.estilos-arquitetonicos {
+    margin-bottom: 3rem;
+}
+
+.estilos-arquitetonicos > h2 {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 4px solid #ED2939;
+    padding-bottom: 1rem;
+}
+
+.timeline-arquitetura {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.estilo {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.estilo:hover {
+    transform: translateY(-5px);
+}
+
+.estilo-periodo {
+    background: linear-gradient(135deg, #002395 0%, #001a70 100%);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.estilo-periodo h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.3rem;
+}
+
+.estilo-periodo time {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.estilo img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.estilo p {
+    padding: 1.5rem;
+    text-align: justify;
+    line-height: 1.7;
+}
+
+.curiosidades-monumentos {
+    background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+    color: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.curiosidades-monumentos h2 {
+    font-size: 2.3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid #ED2939;
+    padding-bottom: 1rem;
+}
+
+.curiosidades-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.curiosidade-item {
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.curiosidade-item:hover {
+    transform: scale(1.03);
+}
+
+.curiosidade-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.curiosidade-item p {
+    padding: 1.5rem;
+    line-height: 1.7;
+}
+
+footer {
+    background-color: #002395;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin: 0.3rem 0;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .torre-eiffel {
+        grid-template-columns: 1fr;
+    }
+
+    .dados-torre {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-arquitetura {
+        grid-template-columns: 1fr;
+    }
+}

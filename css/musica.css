@@ -1,0 +1,437 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(to bottom, #1a1a2e 0%, #16213e 100%);
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #ED2939 0%, #c41e2e 100%);
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+header p {
+    font-size: 1.3rem;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+nav {
+    background-color: #002395;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: #001a70;
+}
+
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.hero-musica {
+    position: relative;
+    height: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.hero-musica img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.8));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-overlay h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+
+.hero-overlay p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    font-style: italic;
+}
+
+.compositores-classicos {
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 15px;
+    margin-bottom: 3rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.compositores-classicos > h2 {
+    font-size: 2.5rem;
+    color: #002395;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    border-bottom: 4px solid #ED2939;
+    padding-bottom: 1rem;
+}
+
+.compositores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.compositor {
+    background: #f9f9f9;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.compositor:hover {
+    transform: translateY(-5px);
+}
+
+.compositor-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #002395 0%, #001a70 100%);
+    color: white;
+}
+
+.compositor-header img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+}
+
+.compositor-nome h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.compositor-nome time {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.compositor-bio {
+    padding: 1.5rem;
+}
+
+.compositor-bio p {
+    text-align: justify;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.obras-principais {
+    list-style: none;
+    padding-left: 0;
+}
+
+.obras-principais li {
+    padding: 0.6rem 0;
+    border-bottom: 1px solid #e0e0e0;
+    color: #555;
+}
+
+.obras-principais li:last-child {
+    border-bottom: none;
+}
+
+.chanson-francaise {
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 15px;
+    margin-bottom: 3rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.chanson-francaise > h2 {
+    font-size: 2.5rem;
+    color: #ED2939;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 4px solid #002395;
+    padding-bottom: 1rem;
+}
+
+.chanson-intro {
+    max-width: 900px;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+.artistas-chanson {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.artista {
+    background: #f9f9f9;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.artista:hover {
+    transform: scale(1.03);
+}
+
+.artista img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.artista-info {
+    padding: 1.5rem;
+}
+
+.artista-info h3 {
+    font-size: 1.5rem;
+    color: #002395;
+    margin-bottom: 0.3rem;
+}
+
+.artista-info .apelido {
+    display: block;
+    font-size: 0.9rem;
+    color: #ED2939;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.artista-info p {
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+.musica-contemporanea {
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 15px;
+    margin-bottom: 3rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.musica-contemporanea > h2 {
+    font-size: 2.5rem;
+    color: #002395;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    border-bottom: 4px solid #ED2939;
+    padding-bottom: 1rem;
+}
+
+.generos-modernos {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.genero {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    background: #f9f9f9;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.genero-icone img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.genero-conteudo {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.genero-conteudo h3 {
+    font-size: 1.8rem;
+    color: #002395;
+    margin-bottom: 1rem;
+}
+
+.genero-conteudo p {
+    text-align: justify;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.genero-conteudo ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.genero-conteudo ul li {
+    padding: 0.7rem 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.genero-conteudo ul li:last-child {
+    border-bottom: none;
+}
+
+.genero-conteudo ul li strong {
+    color: #ED2939;
+}
+
+.festivais {
+    background: linear-gradient(135deg, #ED2939 0%, #c41e2e 100%);
+    color: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.festivais h2 {
+    font-size: 2.3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid white;
+    padding-bottom: 1rem;
+}
+
+.festivais-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.festival {
+    background: rgba(255,255,255,0.15);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 2px solid rgba(255,255,255,0.3);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.festival:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.25);
+}
+
+.festival h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.festival .festival-data {
+    font-style: italic;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.festival p:last-child {
+    line-height: 1.7;
+}
+
+footer {
+    background-color: #002395;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin: 0.3rem 0;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .hero-musica {
+        height: 300px;
+    }
+
+    .hero-overlay h2 {
+        font-size: 2rem;
+    }
+
+    .compositores-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .genero {
+        grid-template-columns: 1fr;
+    }
+
+    .festivais-grid {
+        grid-template-columns: 1fr;
+    }
+}

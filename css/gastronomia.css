@@ -1,0 +1,316 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #8B4513 0%, #654321 100%);
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+header p {
+    font-size: 1.3rem;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+nav {
+    background-color: #ED2939;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: #c41e2e;
+}
+
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.banner {
+    position: relative;
+    height: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.banner-overlay h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+}
+
+.banner-overlay p {
+    font-size: 1.3rem;
+    max-width: 800px;
+    font-style: italic;
+}
+
+.pratos-iconicos {
+    margin-bottom: 3rem;
+}
+
+.pratos-iconicos h2 {
+    font-size: 2.5rem;
+    color: #8B4513;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 4px solid #ED2939;
+    padding-bottom: 1rem;
+}
+
+.pratos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.prato figure {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.prato figure:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.prato figure img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.prato figcaption {
+    padding: 1.5rem;
+    position: relative;
+}
+
+.prato figcaption h3 {
+    font-size: 1.6rem;
+    color: #8B4513;
+    margin-bottom: 0.8rem;
+}
+
+.prato figcaption p {
+    text-align: justify;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.prato .categoria {
+    display: inline-block;
+    background-color: #ED2939;
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.queijos-vinhos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.queijos, .vinhos {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.queijos h2, .vinhos h2 {
+    font-size: 2rem;
+    color: #8B4513;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    border-bottom: 3px solid #ED2939;
+    padding-bottom: 0.8rem;
+}
+
+.queijos img, .vinhos img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.queijos p, .vinhos p {
+    text-align: justify;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.queijos ul, .vinhos ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.queijos ul li, .vinhos ul li {
+    padding: 0.8rem;
+    margin-bottom: 0.8rem;
+    background: #f5f5f5;
+    border-radius: 8px;
+    border-left: 4px solid #ED2939;
+}
+
+.queijos ul li strong, .vinhos ul li strong {
+    color: #8B4513;
+}
+
+.tradicoes {
+    background: linear-gradient(135deg, #8B4513 0%, #654321 100%);
+    color: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.tradicoes h2 {
+    font-size: 2.3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid #ED2939;
+    padding-bottom: 1rem;
+}
+
+.tradicoes-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.tradicao-item {
+    background: rgba(255,255,255,0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 2px solid rgba(255,255,255,0.2);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.tradicao-item:hover {
+    transform: scale(1.03);
+    background: rgba(255,255,255,0.15);
+}
+
+.tradicao-item h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+    color: #FFD700;
+}
+
+.tradicao-item p {
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+footer {
+    background-color: #002395;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin: 0.3rem 0;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .banner {
+        height: 300px;
+    }
+
+    .banner-overlay h2 {
+        font-size: 2rem;
+    }
+
+    .pratos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .queijos-vinhos {
+        grid-template-columns: 1fr;
+    }
+
+    .tradicoes-content {
+        grid-template-columns: 1fr;
+    }
+}

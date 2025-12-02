@@ -1,0 +1,470 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: #fefefe;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #4B0082 0%, #2C0052 100%);
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+header p {
+    font-size: 1.3rem;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+nav {
+    background-color: #ED2939;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: #c41e2e;
+}
+
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.intro-arte {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    background: linear-gradient(135deg, #4B0082 0%, #2C0052 100%);
+    color: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.intro-texto h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid #ED2939;
+    padding-bottom: 0.8rem;
+}
+
+.intro-texto p {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+.intro-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+.movimentos-artisticos {
+    margin-bottom: 3rem;
+}
+
+.movimentos-artisticos > h2 {
+    font-size: 2.5rem;
+    color: #4B0082;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    border-bottom: 4px solid #ED2939;
+    padding-bottom: 1rem;
+}
+
+.movimento {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.movimento-invertido {
+    grid-template-columns: 1fr 1.2fr;
+}
+
+.movimento-info {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.movimento-info h3 {
+    font-size: 2rem;
+    color: #4B0082;
+    margin-bottom: 0.5rem;
+}
+
+.movimento-info time {
+    color: #ED2939;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.movimento-info p {
+    text-align: justify;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.movimento-info ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.movimento-info ul li {
+    padding: 0.8rem;
+    margin-bottom: 0.8rem;
+    background: #f5f5f5;
+    border-radius: 8px;
+    border-left: 4px solid #4B0082;
+}
+
+.movimento-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.museus {
+    margin-bottom: 3rem;
+}
+
+.museus > h2 {
+    font-size: 2.5rem;
+    color: #4B0082;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 4px solid #ED2939;
+    padding-bottom: 1rem;
+}
+
+.museus-destaque {
+    display: grid;
+    gap: 2rem;
+}
+
+.museu-principal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.museu-principal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.museu-detalhes {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.museu-detalhes h3 {
+    font-size: 2.2rem;
+    color: #4B0082;
+    margin-bottom: 1rem;
+}
+
+.museu-detalhes p {
+    text-align: justify;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.museu-detalhes dl {
+    background: #f5f5f5;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid #ED2939;
+}
+
+.museu-detalhes dt {
+    font-weight: bold;
+    color: #4B0082;
+    margin-top: 0.8rem;
+}
+
+.museu-detalhes dt:first-child {
+    margin-top: 0;
+}
+
+.museu-detalhes dd {
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.museus-secundarios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.museu-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.museu-card:hover {
+    transform: translateY(-5px);
+}
+
+.museu-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.museu-card h4 {
+    font-size: 1.4rem;
+    color: #4B0082;
+    padding: 1rem 1.5rem 0.5rem;
+}
+
+.museu-card p {
+    padding: 0 1.5rem 1.5rem;
+    font-size: 0.95rem;
+}
+
+.literatura {
+    margin-bottom: 3rem;
+}
+
+.literatura > h2 {
+    font-size: 2.5rem;
+    color: #4B0082;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 4px solid #ED2939;
+    padding-bottom: 1rem;
+}
+
+.literatura-content {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 2rem;
+}
+
+.literatura-sidebar {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    height: fit-content;
+}
+
+.literatura-sidebar img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.literatura-sidebar blockquote {
+    padding: 2rem;
+    font-style: italic;
+    background: linear-gradient(135deg, #4B0082 0%, #2C0052 100%);
+    color: white;
+}
+
+.literatura-sidebar blockquote p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.literatura-sidebar cite {
+    display: block;
+    text-align: right;
+    font-size: 0.95rem;
+    color: #FFD700;
+}
+
+.literatura-autores {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.autor {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-top: 4px solid #4B0082;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.autor:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.autor h3 {
+    font-size: 1.4rem;
+    color: #4B0082;
+    margin-bottom: 0.3rem;
+}
+
+.autor .periodo {
+    color: #ED2939;
+    font-weight: bold;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.autor p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.cinema {
+    margin-bottom: 3rem;
+}
+
+.cinema > h2 {
+    font-size: 2.5rem;
+    color: #4B0082;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 4px solid #ED2939;
+    padding-bottom: 1rem;
+}
+
+.cinema-intro {
+    text-align: center;
+    font-size: 1.15rem;
+    max-width: 900px;
+    margin: 0 auto 2rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+.cinema-periodos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 2rem;
+}
+
+.periodo-cinema {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.periodo-cinema h3 {
+    font-size: 1.8rem;
+    color: #4B0082;
+    padding: 1.5rem 1.5rem 1rem;
+}
+
+.periodo-cinema img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.periodo-cinema p {
+    padding: 1rem 1.5rem 1.5rem;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+footer {
+    background-color: #002395;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin: 0.3rem 0;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .intro-arte {
+        grid-template-columns: 1fr;
+    }
+
+    .movimento, .movimento-invertido {
+        grid-template-columns: 1fr;
+    }
+
+    .museu-principal {
+        grid-template-columns: 1fr;
+    }
+
+    .literatura-content {
+        grid-template-columns: 1fr;
+    }
+
+    .cinema-periodos {
+        grid-template-columns: 1fr;
+    }
+}

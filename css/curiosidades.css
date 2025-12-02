@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FF6347 100%);
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #FF6347 0%, #FF4500 100%);
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+header p {
+    font-size: 1.3rem;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+nav {
+    background-color: #ED2939;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: #c41e2e;
+}
+
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.intro-curiosidades {
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 3rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.intro-curiosidades h2 {
+    font-size: 3rem;
+    color: #FF6347;
+    margin-bottom: 1.5rem;
+}
+
+.intro-curiosidades p {
+    font-size: 1.15rem;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.9;
+    color: #555;
+}
+
+.curiosidades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.curiosidade-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.curiosidade-card:hover {
+    transform: translateY(-8px) rotate(1deg);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+.card-numero {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #FF6347;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+.curiosidade-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.curiosidade-card h3 {
+    font-size: 1.5rem;
+    color: #FF6347;
+    padding: 1.5rem 1.5rem 1rem;
+    line-height: 1.4;
+}
+
+.curiosidade-card p {
+    padding: 0 1.5rem 1.5rem;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+.fatos-rapidos {
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    margin-bottom: 3rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.fatos-rapidos > h2 {
+    font-size: 2.5rem;
+    color: #FF6347;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    border-bottom: 4px solid #FFD700;
+    padding-bottom: 1rem;
+}
+
+.fatos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.fato {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 1.5rem;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.fato:hover {
+    transform: scale(1.03);
+}
+
+.fato-icone {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.fato-icone img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fato-texto h4 {
+    font-size: 1.3rem;
+    color: #FF6347;
+    margin-bottom: 0.5rem;
+}
+
+.fato-texto p {
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+.voce-sabia {
+    background: linear-gradient(135deg, #002395 0%, #001a70 100%);
+    color: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.voce-sabia h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 4px solid #FFD700;
+    padding-bottom: 1rem;
+}
+
+.voce-sabia ul {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.voce-sabia ul li {
+    padding: 1.5rem;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    border-left: 5px solid #FFD700;
+    line-height: 1.7;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.voce-sabia ul li:hover {
+    transform: translateX(10px);
+    background: rgba(255,255,255,0.2);
+}
+
+.voce-sabia ul li::before {
+    content: "✓ ";
+    color: #FFD700;
+    font-weight: bold;
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+}
+
+footer {
+    background-color: #002395;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin: 0.3rem 0;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .curiosidades-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fatos-container {
+        grid-template-columns: 1fr;
+    }
+
+    .fato {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .fato-icone {
+        margin: 0 auto;
+    }
+
+    .voce-sabia ul {
+        grid-template-columns: 1fr;
+    }
+}
